@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Gift 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  overflow:hidden;
+  font-family:'Patrick Hand', cursive;
+  background:#ffd6e5;
+}
+.page{
+  display:none;
+  width:90%;
+  max-width:420px;
+  margin:auto;
+  text-align:center;
+  animation:fade .6s ease;
+}
+.page.active{display:block}
+@keyframes fade{
+  from{opacity:0;transform:translateX(40px)}
+  to{opacity:1;transform:translateX(0)}
+}
+h2{font-size:26px;color:#000}
+p{font-size:20px;color:#000;line-height:1.7}
+.circle-photo{
+  width:120px;height:120px;border-radius:50%;
+  object-fit:cover;border:3px solid #fff;margin-bottom:15px;
+}
+.teddy{
+  width:120px;
+  margin:0 auto 12px;
+  display:block;
+}
+button{
+  margin:18px 10px 0;
+  padding:10px 26px;
+  border:none;
+  border-radius:30px;
+  background:#ff4f8b;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+}
+.no-btn{position:absolute}
+
+/* ✨ sparkle + 💗 hearts */
+.sparkle,.heart{
+  position:fixed;
+  top:-30px;
+  pointer-events:none;
+  animation:float linear infinite;
+}
+.sparkle{font-size:14px}
+.heart{font-size:20px}
+@keyframes float{
+  to{transform:translateY(120vh) rotate(360deg);opacity:0;}
+}
+
+/* PHOTO PAGE */
+.photo-page{
+  background:#fff;
+  min-height:100vh;
+  padding:20px;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.frame{
+  background:#fff;
+  border-radius:18px;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+.frame img{width:100%;border-radius:14px}
+.frame p{margin:6px 0 0;font-size:16px;color:#000}
+</style>
+</head>
+
+<body>
+
+<script>
+setInterval(()=>{
+  let s=document.createElement("div");
+  s.className="sparkle";
+  s.innerText="✨";
+  s.style.left=Math.random()*100+"vw";
+  s.style.animationDuration=10+Math.random()*10+"s";
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),20000);
+},700);
+
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerText="💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=12+Math.random()*8+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),20000);
+},900);
+</script>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <h2>💝 Open Cutie 💝</h2>
+  <button onclick="next()">Open 💖</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <img class="circle-photo" src="https://i.ibb.co/35MzBGtG/IMG-20251208-115254-857.jpg">
+  <p>HAPPY VALENTINE'S DAY MY BABY 💝</p>
+  <button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+You know what, when I saw you first time 🤭 you look beautiful 😍.<br>
+I suddenly fall in love with you 💖.<br><br>
+I don't know what happened to me I started to like you..... 🤭🙂
+</p>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+May be I want a beautiful GF like you 🫠...<br>
+I don't know I am handsome or not 🤡..... Forget it.....
+</p>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+You know what I already tell you about my feelings for you...... 😉<br><br>
+I really like you and I love you soo much my little baby 💞<br><br>
+I don't know you love me or not I just want to tell you my feelings..... 😿
+</p>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+You know what, we meet suddenly in night you remember when I meet you<br><br>
+My heart suddenly change........<br><br>
+I don't know what happen to my heart but it feels safe,<br>
+and feel like my life is better now.......<br><br>
+I am not lieying I feel that night when I meet you 🫠..........
+</p>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+I know I tell you too early I don't know why....<br>
+Maybe I love you that's why.......🥺<br><br>
+I don't want to lose you because you are my everything 😐........<br><br>
+I really want you only you......
+</p>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+Because you are my type 🤭 I don't know how 🤪<br>
+But I know you are different from other girls.... I know you.....<br><br>
+My heart never allow me to loose you 😭......
+</p>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- ✅ NEW PAGE ADDED (ONLY THIS ONE) -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+I don’t know what I will do in my life if I lose you.<br>
+Maybe I will not I dont know how to say....😑😣,<br>
+because I don’t know why my heart always wants only you.<br>
+I really don’t know why…. 🥺😭<br><br>
+
+Because you are different from other girls.<br><br>
+
+Babe, you are different… 🫶
+</p>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page">
+<h2>I WANT TO ASK YOU SOMETHING.... 👉</h2>
+<button onclick="back()">Back</button><button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 10 -->
+<div class="page">
+<h2>WILL YOU MARRY ME IN FUTURE TRANG 💍</h2>
+<button onclick="yes()">YES 💖</button>
+<button class="no-btn" onmouseover="runAway(this)">NO 😆</button>
+<button onclick="back()">Back</button>
+</div>
+
+<!-- PAGE 11 -->
+<div class="page photo-page">
+<h2>Our Memories 💕</h2>
+<div class="gallery">
+  <div class="frame"><img src="https://i.ibb.co/35MzBGtG/IMG-20251208-115254-857.jpg"><p>My Love 😘</p></div>
+  <div class="frame"><img src="https://i.ibb.co/fzyg6CsX/IMG-20260124-033947.png"><p>My Love 😘</p></div>
+  <div class="frame"><img src="https://i.ibb.co/LhsbRzHb/file-0000000018dc72069fb98aef72524203.png"><p>My Love 😘</p></div>
+  <div class="frame"><img src="https://i.ibb.co/s9RdTjH9/file-0000000088f072068a6a2b57b9de9616.png"><p>My Love 😘</p></div>
+  <div class="frame"><img src="https://i.ibb.co/YBHRWLN7/My-Photo-Share1769279156339.jpg"><p>My Love 😘</p></div>
+</div>
+</div>
+
+<script>
+let pages=document.querySelectorAll(".page");
+let i=0;
+function next(){pages[i].classList.remove("active");i++;pages[i].classList.add("active");}
+function back(){pages[i].classList.remove("active");i--;pages[i].classList.add("active");}
+function yes(){next();}
+function runAway(btn){
+  btn.style.top=Math.random()*200+"px";
+  btn.style.left=Math.random()*200+"px";
+}
+</script>
+
+</body>
+</html>
